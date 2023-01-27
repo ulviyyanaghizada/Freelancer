@@ -1,0 +1,20 @@
+﻿@using Freelancer.ViewModels;
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+@model UpdatePortfolioVM
+<div class="container">
+    <form class="forms-sample" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label asp-for="CoverImage">CoverImage</label>
+            <input asp-for="CoverImage" class="form-control" accept="image/*" placeholder="CoverImage">
+            <span asp-validation-for="CoverImage" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button asp-action="Index">Cancel</button>
+    </form>
+
+</div>
+
